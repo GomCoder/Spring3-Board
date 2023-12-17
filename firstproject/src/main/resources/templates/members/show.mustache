@@ -1,18 +1,19 @@
 {{>layouts/header}}
 {{#member}}
-    <table class="table">
-        <thead>
-        <th scope="col">Id</th>
-        <th scope="col">Email</th>
-        <th scope="col">Password</th>
-        </thead>
-        <tbody>
-        <tr>
-            <th>{{id}}</th>
-            <td>{{email}}</td>
-            <td>{{password}}</td>
-        </tr>
-        </tbody>
-    </table>
+<table class="table">
+    <thead>
+    <th scope="col">Id</th>
+    <th scope="col">Email</th>
+    <th scope="col">Password</th>
+    </thead>
+    <tbody>
+    <tr>
+        <th>{{id}}</th>
+        <td>{{email}}</td>
+        <td>{{password}}</td>
+    </tr>
+    </tbody>
+</table>
+<a href="/members">Go to Member List</a>
 {{/member}}
 {{>layouts/footer}}

@@ -45,7 +45,7 @@ public class ArticleController {
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
         //System.out.println(saved.toString()); //리포지토리 값 확인
-        return "";
+        return "redirect:/articles/" + saved.getId();
     }
 
     /**
