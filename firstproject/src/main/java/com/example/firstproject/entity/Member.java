@@ -14,11 +14,11 @@ import lombok.ToString;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @Column
-    String email;
+    private String email;
 
     @Column
-    String password;
+    private String password;
 }

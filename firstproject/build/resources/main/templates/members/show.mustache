@@ -1,0 +1,21 @@
+{{>layouts/header}}
+{{#member}}
+<table class="table">
+    <thead>
+    <th scope="col">Id</th>
+    <th scope="col">Email</th>
+    <th scope="col">Password</th>
+    </thead>
+    <tbody>
+    <tr>
+        <th>{{id}}</th>
+        <td>{{email}}</td>
+        <td>{{password}}</td>
+    </tr>
+    </tbody>
+</table>
+<a href="/members/{{member.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/members/{{member.id}}/delete" class="btn btn-danger">Delete</a>
+<a href="/members">Go to Member List</a>
+{{/member}}
+{{>layouts/footer}}
