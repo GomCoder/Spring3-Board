@@ -123,7 +123,9 @@ public class ArticleApiController {
     @PostMapping("/api/articles")
     public ResponseEntity<Article> create (@RequestBody ArticleForm dto) {
         Article created = articleService.create(dto);
-        return (created != null) ? ResponseEntity.status(HttpStatus.OK).body(created) : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        return (created != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(created) :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     //PATCH
@@ -137,14 +139,24 @@ public class ArticleApiController {
     public ResponseEntity<Article> update (@PathVariable Long id,
                                            @RequestBody ArticleForm dto) {
         Article updated = articleService.update(id, dto);
-        return (updated != null) ? ResponseEntity.status(HttpStatus.OK).body(updated) : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        return (updated != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(updated) :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     //DELETE
+
+    /**
+     * 게시글 삭제 API
+     * @param id
+     * @return
+     */
     @DeleteMapping("/api/articles/{id}")
     public ResponseEntity<Article> delete (@PathVariable Long id) {
         Article deleted = articleService.delete(id);
-        return (deleted != null) ? ResponseEntity.status(HttpStatus.NO_CONTENT).build() : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        return (deleted != null) ?
+                ResponseEntity.status(HttpStatus.NO_CONTENT).build() :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     //Transaction Processing Test
